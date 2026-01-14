@@ -20,12 +20,12 @@ export default function Header() {
 
                     {/* Desktop Menu */}
                     <nav className="hidden md:flex items-center space-x-8 text-md font-medium text-gray-700 poppins-thin">
-                        <Link to="/" className="hover:text-blue-600 transition text-white">Home</Link>
-                        <Link to="/about" className="hover:text-blue-600 transition text-white">About</Link>
-                        <Link to="/services" className="hover:text-blue-600 transition text-white">Services</Link>
-                        <Link to="/gallery" className="hover:text-blue-600 transition text-white">Gallery</Link>
-                        <Link to="/pricing" className="hover:text-blue-600 transition text-white">Pricing</Link>
-                        <Link to="/contact" className="hover:text-blue-600 transition text-white">Contact</Link>
+                        <Link to="/" className="hover:text-[#f5e6a2] transition text-white">Home</Link>
+                        <Link to="/about" className="hover:text-[#f5e6a2] transition text-white">About</Link>
+                        <Link to="/services" className="hover:text-[#f5e6a2] transition text-white">Services</Link>
+                        <Link to="/gallery" className="hover:text-[#f5e6a2] transition text-white">Gallery</Link>
+                        <Link to="/pricing" className="hover:text-[#f5e6a2] transition text-white">Pricing</Link>
+                        <Link to="/contact" className="hover:text-[#f5e6a2] transition text-white">Contact</Link>
                     </nav>
 
 
