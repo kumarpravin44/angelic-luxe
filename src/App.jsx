@@ -1,5 +1,6 @@
-import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useRef, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import LoadingBar from "react-top-loading-bar";
 
 import './App.css'
 import Header from './component/Header'
@@ -10,32 +11,46 @@ import Services from './pages/Services';
 import Gallery from './pages/Gallery';
 import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
-
+import WhatsAppButton from './component/WhatsAppButton';
 
 function App() {
-
+  const loadingBarRef = useRef(null);
 
   return (
-    <>
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <ContactFooter></ContactFooter>
-      </Router>
+    <Router>
+      {/* Loader bar */}
+      <LoadingBar color="#128C7E" ref={loadingBarRef} height={5} />
 
+      <Header />
+      <Routes>
+        <Route path="/" element={<PageWrapper loadingBarRef={loadingBarRef}><Home /></PageWrapper>} />
+        <Route path="/about" element={<PageWrapper loadingBarRef={loadingBarRef}><About /></PageWrapper>} />
+        <Route path="/services" element={<PageWrapper loadingBarRef={loadingBarRef}><Services /></PageWrapper>} />
+        <Route path="/gallery" element={<PageWrapper loadingBarRef={loadingBarRef}><Gallery /></PageWrapper>} />
+        <Route path="/pricing" element={<PageWrapper loadingBarRef={loadingBarRef}><Pricing /></PageWrapper>} />
+        <Route path="/contact" element={<PageWrapper loadingBarRef={loadingBarRef}><Contact /></PageWrapper>} />
+      </Routes>
 
-
-
-
-    </>
-  )
+      <ContactFooter />
+      <WhatsAppButton />
+    </Router>
+  );
 }
 
-export default App
+// Wrapper to trigger loader on route change
+function PageWrapper({ children, loadingBarRef }) {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (loadingBarRef.current) {
+      loadingBarRef.current.continuousStart();
+      setTimeout(() => {
+        loadingBarRef.current.complete();
+      }, 600); // simulate loading duration
+    }
+  }, [location]);
+
+  return children;
+}
+
+export default App;
