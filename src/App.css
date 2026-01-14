@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'Transcity';
+  src: url('/src/assets/fonts/Transcity.eot');
+  src: url('/src/assets/fonts/Transcity.eot?#iefix') format('embedded-opentype'),
+    url('/src/assets/fonts/Transcity.woff2') format('woff2'),
+    url('/src/assets/fonts/Transcity.woff') format('woff'),
+    url('/src/assets/fonts/Transcity.ttf') format('truetype'),
+    url('/src/assets/fonts/Transcity.svg#Transcity') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+.site-logo {
+  max-width: 120px;
+
+}
+
+img {
+  max-width: 100%;
+}
+
+.bg-primary {
+  background-color: #4e352b;
+}
+
+.bg-primary:hover {
+  background-color: #6f4d3f;
+}
+
+.transcity-font {
+  font-family: 'Transcity';
+}
+
+.hero-banner {
+  background-image: url('/src/assets/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #4e352b, #000);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.animate-slideIn {
+  animation: slideIn 0.4s ease-out;
+}
+
+
+@media (max-width:767px) {
+  .site-logo {
+    max-width: 80px;
+  }
+}
