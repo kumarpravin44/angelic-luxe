@@ -1,8 +1,14 @@
 import { useState, useEffect } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
+// Import images directly from src/assets
+import gallery1 from "../assets/gallery-1.jpg";
+import gallery2 from "../assets/gallery-2.jpg";
+import gallery3 from "../assets/gallery-3.jpg";
+import gallery4 from "../assets/gallery-4.jpg";
+
 export default function GalleryPreview() {
-    const images = [1, 2, 3, 4].map((i) => `/src/assets/gallery-${i}.jpg`);
+    const images = [gallery1, gallery2, gallery3, gallery4];
     const [selectedIndex, setSelectedIndex] = useState(null);
     const [animateKey, setAnimateKey] = useState(0); // triggers animation on change
 
@@ -37,6 +43,7 @@ export default function GalleryPreview() {
                 Gallery
             </h2>
 
+            {/* Grid of thumbnails */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
                 {images.map((src, i) => (
                     <img
