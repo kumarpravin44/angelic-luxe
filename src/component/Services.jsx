@@ -7,22 +7,22 @@ export default function Services() {
     const services = [
         {
             title: "Bridal Makeover",
-            desc: "Elegant, long-lasting bridal looks for your big day.",
+            desc: "Flawless bridal look with expert makeup and styling. Radiant confidence for your big day.",
             img: bridalImg,
         },
         {
             title: "Threading",
-            desc: "Precise eyebrow and facial threading for a clean, defined look.",
+            desc: "Clean, precise eyebrow shaping. Smooth finish with gentle technique.",
             img: threadingImg,
         },
         {
             title: "Facial",
-            desc: "Relaxing facials to rejuvenate and hydrate your skin.",
+            desc: "Refreshing treatment to hydrate and rejuvenate. Restores natural glow instantly.",
             img: facialImg,
         },
         {
             title: "Hair Straightening",
-            desc: "Smooth, silky hair with professional straightening treatments.",
+            desc: "Sleek, silky hair made effortless. Long‑lasting smooth style.",
             img: hairImg,
         },
     ];
