@@ -1,25 +1,30 @@
+import bridalImg from "./../assets/bridal-makeover.jpg";
+import threadingImg from "./../assets/threading.jpg";
+import facialImg from "./../assets/facial.jpg";
+import hairImg from "./../assets/hair-straightening.jpg";
+
 export default function Services() {
     const services = [
         {
             title: "Bridal Makeover",
             desc: "Elegant, long-lasting bridal looks for your big day.",
-            img: "/src/assets/bridal-makeover.jpg"
+            img: bridalImg,
         },
         {
             title: "Threading",
             desc: "Precise eyebrow and facial threading for a clean, defined look.",
-            img: "/src/assets/threading.jpg"
+            img: threadingImg,
         },
         {
             title: "Facial",
             desc: "Relaxing facials to rejuvenate and hydrate your skin.",
-            img: "/src/assets/facial.jpg"
+            img: facialImg,
         },
         {
             title: "Hair Straightening",
             desc: "Smooth, silky hair with professional straightening treatments.",
-            img: "/src/assets/hair-straightening.jpg"
-        }
+            img: hairImg,
+        },
     ];
 
     return (
@@ -47,9 +52,7 @@ export default function Services() {
                             <h3 className="text-xl poppins-thin font-semibold mb-3 text-gray-900">
                                 {s.title}
                             </h3>
-                            <p className="text-gray-600 text-sm mb-4 font-sans">
-                                {s.desc}
-                            </p>
+                            <p className="text-gray-600 text-sm mb-4 font-sans">{s.desc}</p>
                             <a
                                 href="#"
                                 className="inline-block mt-2 px-4 py-2 text-sm font-semibold rounded-full bg-primary text-white hover:bg-primary/90 transition"
