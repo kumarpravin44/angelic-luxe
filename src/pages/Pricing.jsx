@@ -13,7 +13,7 @@ export default function Pricing() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    Pricing Angelic Luxe Makeovers
+                    Pricing
                 </motion.h1>
                 <p className="tagline mt-4 text-lg md:text-xl text-gray-300">
                     Elevating beauty with elegance, artistry, and luxury.

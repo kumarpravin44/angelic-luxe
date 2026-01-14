@@ -13,7 +13,7 @@ export default function Contact() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    Contact Angelic Luxe Makeovers
+                    Contact
                 </motion.h1>
                 <p className="tagline mt-4 text-lg md:text-xl text-gray-300">
                     Elevating beauty with elegance, artistry, and luxury.

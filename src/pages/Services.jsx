@@ -13,7 +13,7 @@ export default function Services() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    Services Angelic Luxe Makeovers
+                    Services
                 </motion.h1>
                 <p className="tagline mt-4 text-lg md:text-xl text-gray-300">
                     Elevating beauty with elegance, artistry, and luxury.
