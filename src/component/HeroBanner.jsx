@@ -1,18 +1,15 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import hero1 from "../assets/banner/hero-1.jpg";
+import hero2 from "../assets/banner/hero-2.jpg";
+import hero3 from "../assets/banner/hero-3.jpg";
+import hero4 from "../assets/banner/hero-4.jpg";
 
 export default function HeroBanner() {
-    const images = [
-        "./src/assets/banner/hero-1.jpg",
-        "./src/assets/banner/hero-2.jpg",
-        "./src/assets/banner/hero-3.jpg",
-        "./src/assets/banner/hero-4.jpg",
-    ]; // replace with your actual image paths
-
+    const images = [hero1, hero2, hero3, hero4];
     const [index, setIndex] = useState(0);
 
-    // Auto-slide every 5 seconds
     useEffect(() => {
         const interval = setInterval(() => {
             setIndex((prev) => (prev + 1) % images.length);
@@ -22,7 +19,6 @@ export default function HeroBanner() {
 
     return (
         <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
-            {/* Background Slider */}
             <AnimatePresence>
                 <motion.div
                     key={index}
@@ -35,10 +31,8 @@ export default function HeroBanner() {
                 />
             </AnimatePresence>
 
-            {/* Overlay */}
             <div className="absolute inset-0 bg-black/50"></div>
 
-            {/* Content */}
             <div className="relative z-10 text-center px-6 max-w-3xl">
                 <h1 className="text-4xl md:text-7xl transcity-font text-white font-200 leading-tight">
                     Angelic Luxe Makeovers
@@ -46,8 +40,6 @@ export default function HeroBanner() {
                 <p className="mt-4 text-lg md:text-xl text-gray-200 font-sans">
                     Make Every Look Angelic
                 </p>
-
-                {/* CTA Buttons */}
                 <div className="mt-8 flex flex-col md:flex-row gap-4 justify-center">
                     <Link
                         to="/Services"
@@ -58,7 +50,6 @@ export default function HeroBanner() {
                 </div>
             </div>
 
-            {/* Slider Controls */}
             <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
                 {images.map((_, i) => (
                     <button
