@@ -8,14 +8,14 @@ export default function Contact() {
             {/* Hero Section */}
             <section className="text-center mb-12">
                 <motion.h1
-                    className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] bg-clip-text text-transparent"
+                    className="text-4xl md:text-7xl transcity-font text-white font-200 leading-tight"
                     initial={{ opacity: 0, y: -30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
                     Get in Touch
                 </motion.h1>
-                <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
+                <p className="mt-2 text-lg text-gray-300 max-w-2xl mx-auto">
                     We’d love to hear from you. Reach out for appointments, inquiries, or collaborations.
                 </p>
             </section>

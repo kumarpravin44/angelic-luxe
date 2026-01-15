@@ -6,7 +6,7 @@ export default function HeroBanner() {
         <section className="relative bg-cover bg-center bg-no-repeat h-[80vh] flex items-center justify-center hero-banner">
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-[rgba(00,00,00,0.6)]"></div>
+            <div className="absolute inset-0 bg-[rgba(00,00,00,0.5)]"></div>
 
             {/* Content */}
             <div className="relative z-10 text-center px-6 max-w-3xl">
