@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const MotionLink = motion(Link);
+
 
     return (
         <header className="sticky top-0 z-[999] bg-gradient-to-r from-black via-[#2c1f1a] to-black shadow-lg">
@@ -45,13 +47,15 @@ export default function Header() {
 
                     {/* CTA Buttons (Desktop) */}
                     <div className="hidden md:flex items-center space-x-4">
-                        <Link to="/BookAppointment"
+                        <MotionLink
+                            to="/BookAppointment"
                             className="glow flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white poppins-thin cursor-pointer border-2 border-green-500"
                             animate={{ borderColor: ["#25D366", "#128C7E", "#25D366"] }}
                             transition={{ repeat: Infinity, duration: 3 }}
                         >
                             Book Appointment
-                        </Link>
+                        </MotionLink>
+
                     </div>
 
                     {/* Mobile Menu Icon */}
@@ -111,12 +115,15 @@ export default function Header() {
 
                     {/* CTA Buttons (Mobile) */}
                     <div className="flex flex-col gap-2 mt-6">
-                        <Link
+                        <MotionLink
                             to="/BookAppointment"
-                            className="glow rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white hover:bg-green-600 transition"
+                            className="glow flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white poppins-thin cursor-pointer border-2 border-green-500"
+                            animate={{ borderColor: ["#25D366", "#128C7E", "#25D366"] }}
+                            transition={{ repeat: Infinity, duration: 3 }}
                         >
                             Book Appointment
-                        </Link>
+                        </MotionLink>
+
                     </div>
                 </div>
             </div>
