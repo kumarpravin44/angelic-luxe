@@ -1,5 +1,6 @@
 import { FiPhone } from "react-icons/fi";
 import { FaWhatsapp, FaMapMarkerAlt, FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function ContactFooter() {
     return (
@@ -43,10 +44,10 @@ export default function ContactFooter() {
                     <ul className="space-y-2">
                         {["Services", "Gallery", "Pricing", "Contact"].map((link, i) => (
                             <li key={i}>
-                                <a href={`#${link.toLowerCase()}`} className="relative text-white hover:text-yellow-400 transition">
+                                <Link to={`${link.toLowerCase()}`} className="relative text-white hover:text-yellow-400 transition">
                                     {link}
                                     <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-yellow-400 transition-all group-hover:w-full"></span>
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>

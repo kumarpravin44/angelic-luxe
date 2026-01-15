@@ -1,4 +1,5 @@
-import bannerBG from "../assets/hero.jpg";
+import { Link } from "react-router-dom";
+
 
 export default function HeroBanner() {
     return (
@@ -18,10 +19,10 @@ export default function HeroBanner() {
 
                 {/* CTA Buttons */}
                 <div className="mt-8 flex flex-col md:flex-row gap-4 justify-center">
-                    <a href="#services"
+                    <Link to="/Services"
                         className="rounded-lg bg-primary px-6 py-3 text-sm md:text-base font-semibold text-white hover:bg-primary/90 transition">
                         Explore Services
-                    </a>
+                    </Link>
 
                 </div>
             </div>

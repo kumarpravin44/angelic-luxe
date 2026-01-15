@@ -13,6 +13,7 @@ import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
 import WhatsAppButton from './component/WhatsAppButton';
 import BookAppointment from "./pages/BookAppointment";
+import ScrollToTop from "./component/ScrollToTop";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop></ScrollToTop>
       {/* Loader bar */}
       <LoadingBar color="#128C7E" ref={loadingBarRef} height={5} />
 

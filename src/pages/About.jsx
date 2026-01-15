@@ -7,8 +7,8 @@ export default function About() {
 
             {/* Hero Section */}
             <section className="relative h-[60vh] flex items-center justify-center text-center px-6">
-                <div className="absolute inset-0 hero-banner bg-cover bg-center opacity-30"></div>
-                <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/80"></div>
+                <div className="absolute inset-0 hero-banner bg-cover bg-center opacity-[0.6]"></div>
+
                 <div className="relative z-10">
                     <motion.h1
                         className="text-4xl md:text-7xl transcity-font text-white font-200 leading-tight"
