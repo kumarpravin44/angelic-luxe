@@ -1,12 +1,42 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function HeroBanner() {
+    const images = [
+        "./src/assets/banner/hero-1.jpg",
+        "./src/assets/banner/hero-2.jpg",
+        "./src/assets/banner/hero-3.jpg",
+        "./src/assets/banner/hero-4.jpg",
+    ]; // replace with your actual image paths
+
+    const [index, setIndex] = useState(0);
+
+    // Auto-slide every 5 seconds
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIndex((prev) => (prev + 1) % images.length);
+        }, 5000);
+        return () => clearInterval(interval);
+    }, [images.length]);
+
     return (
-        <section className="relative bg-cover bg-center bg-no-repeat h-[80vh] flex items-center justify-center hero-banner">
+        <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+            {/* Background Slider */}
+            <AnimatePresence>
+                <motion.div
+                    key={index}
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: `url(${images[index]})` }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 1 }}
+                />
+            </AnimatePresence>
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-[rgba(00,00,00,0.5)]"></div>
+            <div className="absolute inset-0 bg-black/50"></div>
 
             {/* Content */}
             <div className="relative z-10 text-center px-6 max-w-3xl">
@@ -19,12 +49,25 @@ export default function HeroBanner() {
 
                 {/* CTA Buttons */}
                 <div className="mt-8 flex flex-col md:flex-row gap-4 justify-center">
-                    <Link to="/Services"
-                        className="rounded-lg bg-primary px-6 py-3 text-sm md:text-base font-semibold text-white hover:bg-primary/90 transition">
+                    <Link
+                        to="/Services"
+                        className="rounded-lg bg-primary px-6 py-3 text-sm md:text-base font-semibold text-white hover:bg-primary/90 transition"
+                    >
                         Explore Services
                     </Link>
-
                 </div>
+            </div>
+
+            {/* Slider Controls */}
+            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
+                {images.map((_, i) => (
+                    <button
+                        key={i}
+                        onClick={() => setIndex(i)}
+                        className={`w-3 h-3 rounded-full ${i === index ? "bg-[#d4af37]" : "bg-white/50"
+                            }`}
+                    ></button>
+                ))}
             </div>
         </section>
     );
