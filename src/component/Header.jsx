@@ -82,19 +82,33 @@ export default function Header() {
             </div>
 
             {/* Mobile Slide-In Menu */}
-            <div
-                className={`fixed top-0 right-0 h-full w-64 bg-black/90 backdrop-blur-md shadow-lg transform transition-transform duration-300 ease-in-out z-50
-        ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+            <motion.div
+                initial={{ y: "100%" }}
+                animate={{ y: isOpen ? 0 : "100%" }}
+                transition={{ type: "spring", stiffness: 260, damping: 20 }}
+                className="fixed bottom-0 left-0 w-full h-[80vh] bg-gradient-to-t from-[#2c1f1a] to-black/90 backdrop-blur-lg rounded-t-3xl shadow-2xl z-50 overflow-hidden"
             >
                 {/* Close Button */}
                 <button
                     onClick={() => setIsOpen(false)}
-                    className="absolute top-4 right-4 text-white hover:text-[#f5e6a2]"
+                    className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 text-white hover:bg-[#f5e6a2] hover:text-black transition"
                 >
                     ✕
                 </button>
 
-                <div className="flex flex-col mt-16 space-y-4 px-6 poppins-thin">
+                {/* Menu Items */}
+                <motion.div
+                    className="flex flex-col mt-20 space-y-6 px-8 text-lg font-medium poppins-thin"
+                    initial="hidden"
+                    animate="visible"
+                    variants={{
+                        visible: {
+                            transition: {
+                                staggerChildren: 0.1,
+                            },
+                        },
+                    }}
+                >
                     {[
                         { to: "/", label: "Home" },
                         { to: "/about", label: "About" },
@@ -103,30 +117,41 @@ export default function Header() {
                         { to: "/pricing", label: "Pricing" },
                         { to: "/contact", label: "Contact" },
                     ].map((item, i) => (
-                        <Link
+                        <motion.div
                             key={i}
-                            to={item.to}
-                            className="text-white hover:text-[#f5e6a2] transition"
-                            onClick={() => setIsOpen(false)}
+                            variants={{
+                                hidden: { opacity: 0, y: 20 },
+                                visible: { opacity: 1, y: 0 },
+                            }}
                         >
-                            {item.label}
-                        </Link>
+                            <Link
+                                to={item.to}
+                                className="text-white hover:text-[#f5e6a2] transition"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                {item.label}
+                            </Link>
+                        </motion.div>
                     ))}
 
-                    {/* CTA Buttons (Mobile) */}
-                    <div className="flex flex-col gap-2 mt-6">
+                    {/* CTA Button */}
+                    <motion.div
+                        className="mt-8"
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.6 }}
+                    >
                         <MotionLink
                             to="/BookAppointment"
-                            className="glow flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white poppins-thin cursor-pointer border-2 border-green-500"
+                            className="glow flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white poppins-thin border-2 border-green-500 shadow-md"
                             animate={{ borderColor: ["#25D366", "#128C7E", "#25D366"] }}
                             transition={{ repeat: Infinity, duration: 3 }}
                         >
                             Book Appointment
                         </MotionLink>
-
-                    </div>
-                </div>
-            </div>
+                    </motion.div>
+                </motion.div>
+            </motion.div>
         </header >
     );
 }
