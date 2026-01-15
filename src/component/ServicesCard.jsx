@@ -3,7 +3,7 @@ import threadingImg from "./../assets/threading.jpg";
 import facialImg from "./../assets/facial.jpg";
 import hairImg from "./../assets/hair-straightening.jpg";
 
-export default function Services() {
+export default function ServicesCard() {
     const services = [
         {
             title: "Bridal Makeover",

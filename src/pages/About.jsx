@@ -19,7 +19,7 @@ export default function About() {
                         About Angelic Luxe
                     </motion.h1>
                     <motion.p
-                        className="mt-6 text-lg md:text-xl text-gray-200 max-w-2xl mx-auto"
+                        className="mt-6 text-lg md:text-xl poppins-thin text-gray-200 max-w-2xl mx-auto"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5, duration: 1 }}
@@ -34,7 +34,7 @@ export default function About() {
                 <div className="max-w-5xl mx-auto">
                     <h2 className="text-4xl poppins-thin font-bold text-center text-white mb-8 tracking-wide">Our Story</h2>
 
-                    <p className="text-gray-300 leading-relaxed text-lg">
+                    <p className="text-gray-300 leading-relaxed poppins-thin text-lg">
                         Angelic Luxe Makeovers was founded with a vision to redefine luxury
                         beauty experiences. From personalized consultations to flawless
                         transformations, we blend creativity with precision to bring out the
@@ -63,8 +63,8 @@ export default function About() {
                                 transition={{ duration: 0.6, delay: i * 0.2 }}
                                 viewport={{ once: true }}
                             >
-                                <h3 className="text-xl font-semibold text-[#f5e6a2] mb-3">{value.title}</h3>
-                                <p className="text-gray-300">{value.desc}</p>
+                                <h3 className="text-xl poppins-thin font-semibold text-[#f5e6a2] mb-3">{value.title}</h3>
+                                <p className="text-gray-300 poppins-thin">{value.desc}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -96,8 +96,8 @@ export default function About() {
                                     alt={member.name}
                                     className="w-32 h-32 mx-auto rounded-full border-4 border-[#d4af37] mb-4 object-cover hover:scale-110 transition-transform"
                                 />
-                                <h3 className="text-xl font-semibold text-[#f5e6a2]">{member.name}</h3>
-                                <p className="text-gray-300">{member.role}</p>
+                                <h3 className="text-xl poppins-thin font-semibold text-[#f5e6a2]">{member.name}</h3>
+                                <p className="text-gray-300 poppins-thin">{member.role}</p>
                                 <div className="flex justify-center gap-4 mt-4 text-[#d4af37]">
                                     <a href="#" className="hover:text-[#f5e6a2]">🌐</a>
                                     <a href="#" className="hover:text-[#f5e6a2]">📸</a>

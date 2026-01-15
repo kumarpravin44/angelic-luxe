@@ -1,6 +1,6 @@
 import React from 'react'
 import HeroBanner from '../component/HeroBanner'
-import Services from '../component/Services'
+import ServicesCard from '../component/ServicesCard'
 import GalleryPreview from '../component/GalleryPreview'
 import PricingCTA from '../component/PricingCTA'
 
@@ -8,7 +8,7 @@ export default function Home() {
     return (
         <div>
             <HeroBanner></HeroBanner>
-            <Services></Services>
+            <ServicesCard></ServicesCard>
             <GalleryPreview></GalleryPreview>
             <PricingCTA></PricingCTA>
         </div>

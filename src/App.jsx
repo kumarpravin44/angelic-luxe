@@ -12,6 +12,8 @@ import Gallery from './pages/Gallery';
 import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
 import WhatsAppButton from './component/WhatsAppButton';
+import BookAppointment from "./pages/BookAppointment";
+
 
 function App() {
   const loadingBarRef = useRef(null);
@@ -25,14 +27,17 @@ function App() {
       <Routes>
         <Route path="/" element={<PageWrapper loadingBarRef={loadingBarRef}><Home /></PageWrapper>} />
         <Route path="/about" element={<PageWrapper loadingBarRef={loadingBarRef}><About /></PageWrapper>} />
-        <Route path="/services" element={<PageWrapper loadingBarRef={loadingBarRef}><Services /></PageWrapper>} />
+        <Route path="/Services" element={<PageWrapper loadingBarRef={loadingBarRef}><Services /></PageWrapper>} />
         <Route path="/gallery" element={<PageWrapper loadingBarRef={loadingBarRef}><Gallery /></PageWrapper>} />
         <Route path="/pricing" element={<PageWrapper loadingBarRef={loadingBarRef}><Pricing /></PageWrapper>} />
         <Route path="/contact" element={<PageWrapper loadingBarRef={loadingBarRef}><Contact /></PageWrapper>} />
+
+        <Route path="/BookAppointment" element={<PageWrapper loadingBarRef={loadingBarRef}><BookAppointment /></PageWrapper>} />
       </Routes>
 
       <ContactFooter />
       <WhatsAppButton />
+
     </Router>
   );
 }
