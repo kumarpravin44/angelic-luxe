@@ -63,14 +63,13 @@ export default function GalleryPreview() {
                             <img
                                 src={item.src}
                                 alt={`Gallery ${i + 1}`}
-                                className="rounded-lg shadow-md hover:scale-105 transition"
-                                style={{ height: "400px", width: "100%", objectFit: "cover" }}
+                                className="rounded-lg shadow-md hover:scale-105 transition gallery-img"
                             />
                         ) : (
                             <video
                                 src={item.src}
-                                className="rounded-lg shadow-md hover:scale-105 transition"
-                                style={{ height: "400px", width: "100%", objectFit: "cover" }}
+                                className="rounded-lg shadow-md hover:scale-105 transition gallery-img"
+
                                 muted
                                 loop
                                 autoPlay

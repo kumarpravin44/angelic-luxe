@@ -7,7 +7,6 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const MotionLink = motion(Link);
 
-
     return (
         <header className="sticky top-0 z-[999] bg-gradient-to-r from-black via-[#2c1f1a] to-black shadow-lg">
             <div className="mx-auto max-w-7xl px-4">
@@ -32,6 +31,7 @@ export default function Header() {
                             { to: "/services", label: "Services" },
                             { to: "/gallery", label: "Gallery" },
                             { to: "/pricing", label: "Pricing" },
+                            { to: "/blog", label: "Blog" },
                             { to: "/contact", label: "Contact" },
                         ].map((item, i) => (
                             <Link
@@ -45,39 +45,39 @@ export default function Header() {
                         ))}
                     </nav>
 
-                    {/* CTA Buttons (Desktop) */}
-                    <div className="hidden md:flex items-center space-x-4">
+                    {/* Right Side: CTA + Mobile Menu Icon */}
+                    <div className="flex items-center space-x-2">
+                        {/* Book Appointment (always visible) */}
                         <MotionLink
                             to="/BookAppointment"
-                            className="glow flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white poppins-thin cursor-pointer border-2 border-green-500"
+                            className="glow flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-white poppins-thin cursor-pointer border-2 border-green-500"
                             animate={{ borderColor: ["#25D366", "#128C7E", "#25D366"] }}
                             transition={{ repeat: Infinity, duration: 3 }}
                         >
                             Book Appointment
                         </MotionLink>
 
-                    </div>
-
-                    {/* Mobile Menu Icon */}
-                    <button
-                        onClick={() => setIsOpen(!isOpen)}
-                        className="md:hidden rounded-md p-2 text-white hover:bg-white/10"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                            className="w-8 h-8"
+                        {/* Mobile Menu Icon */}
+                        <button
+                            onClick={() => setIsOpen(!isOpen)}
+                            className="md:hidden rounded-md p-2 text-white hover:bg-white/10"
                         >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                            />
-                        </svg>
-                    </button>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth="1.5"
+                                stroke="currentColor"
+                                className="w-8 h-8"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                                />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -86,7 +86,7 @@ export default function Header() {
                 initial={{ y: "100%" }}
                 animate={{ y: isOpen ? 0 : "100%" }}
                 transition={{ type: "spring", stiffness: 260, damping: 20 }}
-                className="fixed bottom-0 left-0 w-full h-[80vh] bg-gradient-to-t from-[#2c1f1a] to-black/90 backdrop-blur-lg rounded-t-3xl shadow-2xl z-50 overflow-hidden"
+                className="fixed bottom-0 left-0 w-full h-[60%] bg-gradient-to-t from-[#2c1f1a] to-black/90 backdrop-blur-lg rounded-t-3xl shadow-2xl z-50 overflow-hidden"
             >
                 {/* Close Button */}
                 <button
@@ -133,25 +133,8 @@ export default function Header() {
                             </Link>
                         </motion.div>
                     ))}
-
-                    {/* CTA Button */}
-                    <motion.div
-                        className="mt-8"
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.6 }}
-                    >
-                        <MotionLink
-                            to="/BookAppointment"
-                            className="glow flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white poppins-thin border-2 border-green-500 shadow-md"
-                            animate={{ borderColor: ["#25D366", "#128C7E", "#25D366"] }}
-                            transition={{ repeat: Infinity, duration: 3 }}
-                        >
-                            Book Appointment
-                        </MotionLink>
-                    </motion.div>
                 </motion.div>
             </motion.div>
-        </header >
+        </header>
     );
 }

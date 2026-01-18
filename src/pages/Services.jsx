@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaCrown, FaPaintBrush, FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Services() {
     const services = [
@@ -58,13 +59,10 @@ export default function Services() {
 
             {/* CTA Section */}
             <section className="text-center mt-16">
-                <a
-                    href="/BookAppointment"
-                    className=" inline-block rounded-full bg-[#fff] text-black font-semibold px-8 py-3 hover:bg-[#f5e6a2] transition"
-                    whileHover={{ scale: 1.05 }}
-                >
+                <Link to="/BookAppointment" className="rounded-full bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-black font-semibold px-6 py-3 shadow-lg hover:shadow-xl transition">
                     Book Your Appointment
-                </a>
+                </Link>
+
             </section>
         </div>
     );

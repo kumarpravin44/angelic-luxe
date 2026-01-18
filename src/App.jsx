@@ -14,6 +14,8 @@ import Contact from './pages/Contact';
 import WhatsAppButton from './component/WhatsAppButton';
 import BookAppointment from "./pages/BookAppointment";
 import ScrollToTop from "./component/ScrollToTop";
+import Blog from "./pages/Blog";
+
 
 
 function App() {
@@ -32,6 +34,7 @@ function App() {
         <Route path="/Services" element={<PageWrapper loadingBarRef={loadingBarRef}><Services /></PageWrapper>} />
         <Route path="/gallery" element={<PageWrapper loadingBarRef={loadingBarRef}><Gallery /></PageWrapper>} />
         <Route path="/pricing" element={<PageWrapper loadingBarRef={loadingBarRef}><Pricing /></PageWrapper>} />
+        <Route path="/blog" element={<PageWrapper loadingBarRef={loadingBarRef}><Blog /></PageWrapper>} />
         <Route path="/contact" element={<PageWrapper loadingBarRef={loadingBarRef}><Contact /></PageWrapper>} />
 
         <Route path="/BookAppointment" element={<PageWrapper loadingBarRef={loadingBarRef}><BookAppointment /></PageWrapper>} />
