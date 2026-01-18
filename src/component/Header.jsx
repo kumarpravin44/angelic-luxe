@@ -115,6 +115,7 @@ export default function Header() {
                         { to: "/services", label: "Services" },
                         { to: "/gallery", label: "Gallery" },
                         { to: "/pricing", label: "Pricing" },
+                        { to: "/blog", label: "Blog" },
                         { to: "/contact", label: "Contact" },
                     ].map((item, i) => (
                         <motion.div
