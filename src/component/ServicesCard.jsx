@@ -2,6 +2,7 @@ import bridalImg from "./../assets/bridal-makeover.jpg";
 import threadingImg from "./../assets/threading.jpg";
 import facialImg from "./../assets/facial.jpg";
 import hairImg from "./../assets/hair-straightening.jpg";
+import { Link } from "react-router-dom";
 
 export default function ServicesCard() {
     const services = [
@@ -53,15 +54,15 @@ export default function ServicesCard() {
                                 {s.title}
                             </h3>
                             <p className="text-gray-600 text-sm mb-4 font-sans">{s.desc}</p>
-                            <a
-                                href="#"
-                                className="inline-block mt-2 px-4 py-2 text-sm font-semibold rounded-full bg-primary text-white hover:bg-primary/90 transition"
-                            >
-                                Learn More
-                            </a>
+
                         </div>
                     </div>
                 ))}
+            </div>
+            <div className="text-center mt-10">
+                <Link to="/pricing" className="rounded-full bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-black font-semibold px-6 py-3 shadow-lg hover:shadow-xl transition">
+                    View Services
+                </Link>
             </div>
         </section>
     );

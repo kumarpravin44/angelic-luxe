@@ -75,7 +75,7 @@ export default function Contact() {
 
                             <div className="flex items-center gap-3 text-gray-200 mb-4">
                                 <FiPhone className="text-lg" />
-                                <span className="text-sm">+91 98765 43210</span>
+                                <span className="text-sm">+91 836 808 2337</span>
                             </div>
 
                             <div className="flex items-center gap-3 text-gray-200 mb-4">
@@ -154,18 +154,7 @@ export default function Contact() {
                 </motion.div>
 
                 {/* Map strip (compact) */}
-                <div className="max-w-5xl mx-auto mt-8 rounded-xl overflow-hidden shadow-lg">
-                    <iframe
-                        title="Angelic Luxe Location"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.158...replace_with_your_embed_link"
-                        width="100%"
-                        height="260"
-                        style={{ border: 0 }}
-                        allowFullScreen=""
-                        loading="lazy"
-                        className="rounded-xl"
-                    />
-                </div>
+
             </div>
 
             {/* Confirmation Modal */}

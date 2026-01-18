@@ -1,15 +1,23 @@
 import React from "react";
 import { motion } from "framer-motion";
+import gallery1 from "../assets/gallery/gallery-1.jpg";
+import gallery2 from "../assets/gallery/gallery-2.jpg";
+import gallery3 from "../assets/gallery/gallery-3.jpg";
+import gallery4 from "../assets/gallery/gallery-4.jpg";
+import promoVideo from "../assets/gallery/promo.mp4";
+
 
 export default function Gallery() {
-    const images = [
-        { src: "/src/assets/gallery-1.jpg", title: "Bridal Makeover" },
-        { src: "/src/assets/gallery-2.jpg", title: "Luxury Styling" },
-        { src: "/src/assets/gallery-3.jpg", title: "Elegant Hair Design" },
-        { src: "/src/assets/gallery-4.jpg", title: "Premium Beauty Session" },
-        { src: "/src/assets/gallery-1.jpg", title: "Creative Glam Look" },
-        { src: "/src/assets/gallery-2.jpg", title: "Golden Hour Glow" },
+    const media = [
+        { type: "image", src: gallery1, title: "Bridal Makeover" },
+        { type: "image", src: gallery2, title: "Luxury Styling" },
+        { type: "image", src: gallery3, title: "Elegant Hair Design" },
+        { type: "image", src: gallery4, title: "Premium Beauty Session" },
+        { type: "image", src: gallery1, title: "Creative Glam Look" },
+        { type: "image", src: gallery2, title: "Golden Hour Glow" },
+        { type: "video", src: promoVideo, title: "Behind the Scenes" },
     ];
+
 
     return (
         <div className="bg-[#4e352b] min-h-screen text-white py-16 px-6">
@@ -30,7 +38,7 @@ export default function Gallery() {
 
             {/* Gallery Grid */}
             <section className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                {images.map((img, i) => (
+                {media.map((item, i) => (
                     <motion.div
                         key={i}
                         className="relative group overflow-hidden rounded-xl shadow-lg"
@@ -39,14 +47,26 @@ export default function Gallery() {
                         transition={{ duration: 0.6, delay: i * 0.1 }}
                         viewport={{ once: true }}
                     >
-                        <img
-                            src={img.src}
-                            alt={img.title}
-                            className="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
-                        />
+                        {item.type === "image" ? (
+                            <img
+                                src={item.src}
+                                alt={item.title}
+                                className="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
+                            />
+                        ) : (
+                            <video
+                                src={item.src}
+                                className="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500"
+                                muted
+                                loop
+                                autoPlay
+                            />
+                        )}
                         {/* Overlay */}
                         <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
-                            <h3 className="text-xl poppins-thin font-semibold text-[#f5e6a2]">{img.title}</h3>
+                            <h3 className="text-xl poppins-thin font-semibold text-[#f5e6a2]">
+                                {item.title}
+                            </h3>
                         </div>
                     </motion.div>
                 ))}

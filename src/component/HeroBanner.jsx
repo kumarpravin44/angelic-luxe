@@ -35,15 +35,16 @@ export default function HeroBanner() {
 
             <div className="relative z-10 text-center px-6 max-w-3xl">
                 <h1 className="text-4xl md:text-7xl transcity-font text-white font-200 leading-tight">
-                    Angelic Luxe Makeovers
+                    Redefining Luxe Transformations
+
                 </h1>
                 <p className="mt-4 text-lg md:text-xl text-gray-200 font-sans">
-                    Make Every Look Angelic
+                    Where artistry meets sophistication for a radiant new you.
                 </p>
                 <div className="mt-8 flex flex-col md:flex-row gap-4 justify-center">
                     <Link
                         to="/Services"
-                        className="rounded-lg bg-primary px-6 py-3 text-sm md:text-base font-semibold text-white hover:bg-primary/90 transition"
+                        className="rounded-full bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-black font-semibold px-6 py-3 shadow-lg hover:shadow-xl transition"
                     >
                         Explore Services
                     </Link>
