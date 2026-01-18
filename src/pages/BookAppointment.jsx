@@ -21,11 +21,17 @@ export default function BookAppointment() {
                 {/* Right Form Panel */}
                 <div className="bg-white/95 backdrop-blur-md p-10 text-black">
                     <h3 className="text-2xl font-semibold text-[#2c1f1a] mb-6">Book Your Appointment</h3>
-                    <form className="space-y-5">
+                    <form
+                        action="https://formspree.io/f/mkoojezr"  // replace with your actual Formspree endpoint
+                        method="POST"
+                        className="space-y-5"
+                    >
                         <div>
                             <label className="block text-sm mb-2">Full Name</label>
                             <input
                                 type="text"
+                                name="name"
+                                required
                                 className="w-full rounded-lg px-4 py-2 border border-gray-300 focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37] outline-none"
                                 placeholder="Enter your name"
                             />
@@ -34,6 +40,8 @@ export default function BookAppointment() {
                             <label className="block text-sm mb-2">Email Address</label>
                             <input
                                 type="email"
+                                name="email"
+                                required
                                 className="w-full rounded-lg px-4 py-2 border border-gray-300 focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37] outline-none"
                                 placeholder="Enter your email"
                             />
@@ -42,6 +50,7 @@ export default function BookAppointment() {
                             <label className="block text-sm mb-2">Phone Number</label>
                             <input
                                 type="tel"
+                                name="phone"
                                 className="w-full rounded-lg px-4 py-2 border border-gray-300 focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37] outline-none"
                                 placeholder="Enter your phone number"
                             />
@@ -49,24 +58,16 @@ export default function BookAppointment() {
                         <div className="grid md:grid-cols-2 gap-4">
                             <div>
                                 <label className="block text-sm mb-2">Preferred Date</label>
-                                <input
-                                    type="date"
-                                    className="w-full rounded-lg px-4 py-2 border border-gray-300 focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37] outline-none"
-                                />
+                                <input type="date" name="date" className="w-full rounded-lg px-4 py-2 border border-gray-300 focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37] outline-none" />
                             </div>
                             <div>
                                 <label className="block text-sm mb-2">Preferred Time</label>
-                                <input
-                                    type="time"
-                                    className="w-full rounded-lg px-4 py-2 border border-gray-300 focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37] outline-none"
-                                />
+                                <input type="time" name="time" className="w-full rounded-lg px-4 py-2 border border-gray-300 focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37] outline-none" />
                             </div>
                         </div>
                         <div>
                             <label className="block text-sm mb-2">Service Type</label>
-                            <select
-                                className="w-full rounded-lg px-4 py-2 border border-gray-300 focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37] outline-none"
-                            >
+                            <select name="service" className="w-full rounded-lg px-4 py-2 border border-gray-300 focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37] outline-none">
                                 <option>Bridal Makeover</option>
                                 <option>Luxury Styling</option>
                                 <option>Hair & Beauty Session</option>
@@ -76,6 +77,7 @@ export default function BookAppointment() {
                         <div>
                             <label className="block text-sm mb-2">Additional Notes</label>
                             <textarea
+                                name="notes"
                                 rows="4"
                                 className="w-full rounded-lg px-4 py-2 border border-gray-300 focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37] outline-none"
                                 placeholder="Any special requests?"
