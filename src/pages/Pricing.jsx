@@ -86,7 +86,7 @@ export default function Pricing() {
                             ))}
                         </ul>
                         <motion.a
-                            href=""
+                            href="/BookAppointment"
                             className="poppins-thin mt-6 block text-center rounded-full bg-[#d4af37] text-black font-semibold py-2 hover:bg-[#f5e6a2] transition"
                             whileHover={{ scale: 1.05 }}
                         >
