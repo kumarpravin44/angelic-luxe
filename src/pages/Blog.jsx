@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 export default function Blog() {
     const posts = [
         {
-            title: "Top Bridal Makeup Trends 2026",
+            title: "De-Tan Treatment for Women: Restore Your Natural Glow",
             excerpt:
                 "Discover the latest luxury bridal looks, from golden hour glows to editorial-inspired artistry.",
-            date: "January 15, 2026",
+            date: "January 19, 2026",
             image: "/src/assets/blog/bridal-trends.jpg",
-            link: "/blog/bridal-trends-2026",
+            link: "/blog/detan-treatment",
         },
         {
             title: "Behind the Scenes: Angelic Luxe",
