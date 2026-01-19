@@ -43,14 +43,14 @@ export default function Contact() {
                 >
                     {/* Left Info */}
                     <div className="p-10 space-y-6 poppins-thin">
-                        <h2 className="text-2xl font-semibold poppins-thin">Angelic Luxe Studio</h2>
+                        <h2 className="text-2xl font-semibold poppins-thin">Angelic Luxe Makeovers</h2>
                         <p className="text-gray-300 text-sm poppins-thin">
                             Luxury bridal & party makeovers in Pune. Personalized looks crafted with precision and care.
                         </p>
 
                         <Info icon={<FiPhone />} text="+91 836 808 2337" />
                         <Info icon={<FiMail />} text="info@angelicluxe.com" />
-                        <Info icon={<FiMapPin />} text="Pune, Maharashtra" />
+                        <Info icon={<FiMapPin />} text="Yahavi, OCR 9, Vanaha Township Lavale Pirangut,Pune, Maharashtra 412115" />
 
                         <div className="flex gap-4 pt-4">
                             <Social icon={<FaInstagram />} />
@@ -69,27 +69,12 @@ export default function Contact() {
                             <motion.button
                                 whileHover={{ y: -2 }}
                                 whileTap={{ scale: 0.97 }}
-                                className="poppins-thin w-full rounded-full bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-black font-semibold py-3"
+                                className="poppins-thin cursor-pointer w-full rounded-full bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-black font-semibold py-3"
                             >
                                 Send Message
                             </motion.button>
 
-                            <div className="flex gap-3 pt-3">
-                                <a
-                                    href="https://wa.me/918368082337"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="poppins-thin flex-1 flex items-center justify-center gap-2 rounded-full bg-[#25D366] text-black py-2 font-medium"
-                                >
-                                    <FaWhatsapp /> WhatsApp
-                                </a>
-                                <a
-                                    href="/BookAppointment"
-                                    className="poppins-thin flex-1 text-center rounded-full border border-white/20 py-2 text-sm hover:bg-white/10"
-                                >
-                                    Book Appointment
-                                </a>
-                            </div>
+
                         </form>
                     </div>
                 </motion.div>

@@ -34,28 +34,30 @@ export default function ContactFooter() {
                     <h2 className="poppins-thin text-2xl font-bold mb-6 bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-transparent bg-clip-text">
                         Contact Us
                     </h2>
-                    <p className="flex items-center gap-3 mb-4">
+                    <a href="tel:+918368082337" className="flex items-center gap-3 mb-4">
                         <span className="bg-white text-black rounded-full p-2 shadow-md">
                             <FiPhone />
                         </span>
                         +91 836 808 2337
-                    </p>
+                    </a>
                     <p className="flex items-center gap-3 mb-4">
                         <span className="bg-green-500 text-white rounded-full p-2 shadow-md">
                             <FaWhatsapp />
                         </span>
                         <a
-                            href="https://wa.me/918368082337"
+                            href="https://wa.me/918368082337?text=Hello%20Angelic%20Luxe%20Makeovers%2C%20I%20would%20like%20to%20book%20an%20appointment."
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="hover:text-[#f5e6a2] transition"
                         >
                             Chat Now
                         </a>
                     </p>
-                    <p className="flex items-center gap-3">
+                    <p className="flex items-center gap-3" >
                         <span className="bg-red-600 text-white rounded-full p-2 shadow-md">
                             <FaMapMarkerAlt />
                         </span>
-                        Pune, Maharashtra
+                        Yahavi, OCR 9, Vanaha Township Lavale Pirangut,Pune, Maharashtra 412115
                     </p>
                 </div>
 
