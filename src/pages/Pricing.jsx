@@ -41,7 +41,7 @@ export default function Pricing() {
     ];
 
     return (
-        <div className="bg-gradient-to-br from-[#4e352b] via-[#2c1f1a] to-black min-h-screen text-white py-16 px-6">
+        <div className="gradient-bg min-h-screen text-white py-16 px-6">
             {/* Hero Section */}
             <section className="text-center mb-12">
                 <motion.h1

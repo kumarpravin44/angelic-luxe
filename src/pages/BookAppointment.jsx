@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function BookAppointment() {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-[#2c1f1a] via-black to-[#4e352b] flex items-center justify-center py-16 px-6">
+        <div className="min-h-screen gradient-bg flex items-center justify-center py-16 px-6">
             <motion.div
                 className="max-w-6xl w-full grid md:grid-cols-2 rounded-xl overflow-hidden shadow-2xl"
                 initial={{ opacity: 0, y: 40 }}

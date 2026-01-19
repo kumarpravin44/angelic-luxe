@@ -60,8 +60,8 @@ export default function ServicesCard() {
                 ))}
             </div>
             <div className="text-center mt-10">
-                <Link to="/pricing" className="poppins-thin rounded-full bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-black font-semibold px-6 py-3 shadow-lg hover:shadow-xl transition">
-                    View Services
+                <Link to="/services" className="poppins-thin rounded-full bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-black font-semibold px-6 py-3 shadow-lg hover:shadow-xl transition">
+                    All Services
                 </Link>
             </div>
         </section>

@@ -27,12 +27,12 @@ export default function Header() {
                     <nav className="hidden md:flex items-center space-x-8 text-md font-medium poppins-thin">
                         {[
                             { to: "/", label: "Home" },
-                            { to: "/about", label: "About" },
+                            { to: "/about", label: "About Us" },
                             { to: "/services", label: "Services" },
                             { to: "/gallery", label: "Gallery" },
                             { to: "/pricing", label: "Pricing" },
                             { to: "/blog", label: "Blog" },
-                            { to: "/contact", label: "Contact" },
+                            { to: "/contact", label: "Contact Us" },
                         ].map((item, i) => (
                             <Link
                                 key={i}
@@ -111,12 +111,12 @@ export default function Header() {
                 >
                     {[
                         { to: "/", label: "Home" },
-                        { to: "/about", label: "About" },
+                        { to: "/about", label: "About Us" },
                         { to: "/services", label: "Services" },
                         { to: "/gallery", label: "Gallery" },
                         { to: "/pricing", label: "Pricing" },
                         { to: "/blog", label: "Blog" },
-                        { to: "/contact", label: "Contact" },
+                        { to: "/contact", label: "Contact Us" },
                     ].map((item, i) => (
                         <motion.div
                             key={i}

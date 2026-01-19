@@ -28,7 +28,7 @@ export default function Services() {
     ];
 
     return (
-        <div className="bg-gradient-to-br from-[#2c1f1a] via-black to-[#4e352b] min-h-screen text-white py-20 px-6">
+        <div className="gradient-bg min-h-screen text-white py-20 px-6">
             {/* Hero Section */}
             <section className="text-center mb-16">
                 <motion.h1
