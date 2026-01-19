@@ -30,7 +30,7 @@ export default function Contact() {
                     <h1 className="text-4xl md:text-7xl transcity-font text-white font-200 leading-tight">
                         Let’s Create Your Look
                     </h1>
-                    <p className="mt-4 text-gray-300 max-w-xl mx-auto">
+                    <p className="poppins-thin mt-4 text-gray-300 max-w-xl mx-auto">
                         Book a premium makeover or message us directly. We respond within 24 hours.
                     </p>
                 </motion.div>
@@ -42,9 +42,9 @@ export default function Contact() {
                     className="grid md:grid-cols-2 rounded-3xl overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl"
                 >
                     {/* Left Info */}
-                    <div className="p-10 space-y-6">
-                        <h2 className="text-2xl font-semibold">Angelic Luxe Studio</h2>
-                        <p className="text-gray-300 text-sm">
+                    <div className="p-10 space-y-6 poppins-thin">
+                        <h2 className="text-2xl font-semibold poppins-thin">Angelic Luxe Studio</h2>
+                        <p className="text-gray-300 text-sm poppins-thin">
                             Luxury bridal & party makeovers in Pune. Personalized looks crafted with precision and care.
                         </p>
 
@@ -61,7 +61,7 @@ export default function Contact() {
 
                     {/* Form */}
                     <div className="p-10 bg-black/30">
-                        <form onSubmit={handleSubmit} className="space-y-5">
+                        <form onSubmit={handleSubmit} className="space-y-5 poppins-thin">
                             <Input icon={<FiUser />} placeholder="Your Name" required />
                             <Input icon={<FiMail />} type="email" placeholder="Email Address" required />
                             <Textarea icon={<FiEdit />} placeholder="Tell us what you’re looking for" required />
@@ -69,7 +69,7 @@ export default function Contact() {
                             <motion.button
                                 whileHover={{ y: -2 }}
                                 whileTap={{ scale: 0.97 }}
-                                className="w-full rounded-full bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-black font-semibold py-3"
+                                className="poppins-thin w-full rounded-full bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-black font-semibold py-3"
                             >
                                 Send Message
                             </motion.button>
@@ -79,13 +79,13 @@ export default function Contact() {
                                     href="https://wa.me/918368082337"
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="flex-1 flex items-center justify-center gap-2 rounded-full bg-[#25D366] text-black py-2 font-medium"
+                                    className="poppins-thin flex-1 flex items-center justify-center gap-2 rounded-full bg-[#25D366] text-black py-2 font-medium"
                                 >
                                     <FaWhatsapp /> WhatsApp
                                 </a>
                                 <a
                                     href="/BookAppointment"
-                                    className="flex-1 text-center rounded-full border border-white/20 py-2 text-sm hover:bg-white/10"
+                                    className="poppins-thin flex-1 text-center rounded-full border border-white/20 py-2 text-sm hover:bg-white/10"
                                 >
                                     Book Appointment
                                 </a>

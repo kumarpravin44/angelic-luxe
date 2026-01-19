@@ -15,12 +15,12 @@ export default function ContactFooter() {
             <div className="absolute inset-0 bg-[url('/src/assets/pattern.png')] opacity-10 pointer-events-none"></div>
 
             {/* Top CTA Band */}
-            <div className="relative bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-black py-6 text-center font-semibold text-lg shadow-lg">
+            <div className="relative poppins-thin bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-black py-6 text-center font-semibold text-lg shadow-lg">
                 <p>
                     Ready to shine with elegance?{" "}
                     <Link
                         to="/BookAppointment"
-                        className="ml-3 inline-block px-6 py-2 rounded-full bg-black text-[#f5e6a2] hover:bg-[#2c1f1a] transition"
+                        className="ml-3 inline-block px-6 py-2 poppins-thin rounded-full bg-black text-[#f5e6a2] hover:bg-[#2c1f1a] transition"
                     >
                         Book Appointment
                     </Link>
@@ -30,8 +30,8 @@ export default function ContactFooter() {
             {/* Middle Section */}
             <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 py-16 px-6">
                 {/* Contact Info */}
-                <div className="bg-white/5 backdrop-blur-md rounded-xl p-8 shadow-lg hover:shadow-[0_0_25px_rgba(212,175,55,0.6)] transition">
-                    <h2 className="text-2xl font-bold mb-6 bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-transparent bg-clip-text">
+                <div className="poppins-thin bg-white/5 backdrop-blur-md rounded-xl p-8 shadow-lg hover:shadow-[0_0_25px_rgba(212,175,55,0.6)] transition">
+                    <h2 className="poppins-thin text-2xl font-bold mb-6 bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-transparent bg-clip-text">
                         Contact Us
                     </h2>
                     <p className="flex items-center gap-3 mb-4">
@@ -60,8 +60,8 @@ export default function ContactFooter() {
                 </div>
 
                 {/* Quick Links */}
-                <div className="bg-white/5 backdrop-blur-md rounded-xl p-8 shadow-lg hover:shadow-[0_0_25px_rgba(212,175,55,0.6)] transition">
-                    <h2 className="text-2xl font-bold mb-6 bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-transparent bg-clip-text">
+                <div className="poppins-thin bg-white/5 backdrop-blur-md rounded-xl p-8 shadow-lg hover:shadow-[0_0_25px_rgba(212,175,55,0.6)] transition">
+                    <h2 className="poppins-thin text-2xl font-bold mb-6 bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-transparent bg-clip-text">
                         Quick Links
                     </h2>
                     <ul className="space-y-3">
@@ -98,7 +98,7 @@ export default function ContactFooter() {
                         </a>
                     ))}
                 </div>
-                <p className="mt-6 text-sm text-gray-400">
+                <p className="mt-6 text-sm text-gray-400 poppins-thin">
                     © 2026 Angelic Luxe Makeovers. All rights reserved.
                 </p>
             </div>

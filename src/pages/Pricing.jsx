@@ -52,7 +52,7 @@ export default function Pricing() {
                 >
                     Pricing Plans
                 </motion.h1>
-                <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
+                <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto poppins-thin">
                     Choose the perfect makeover package tailored to your needs and style.
                 </p>
             </section>
@@ -70,15 +70,15 @@ export default function Pricing() {
                         viewport={{ once: true }}
                     >
                         {plan.popular && (
-                            <span className="absolute top-4 right-4 bg-[#d4af37] text-black text-xs font-bold px-3 py-1 rounded-full">
+                            <span className="poppins-thin absolute top-4 right-4 bg-[#d4af37] text-black text-xs font-bold px-3 py-1 rounded-full">
                                 Most Popular
                             </span>
                         )}
-                        <h3 className="text-2xl font-semibold text-[#f5e6a2] mb-4">
+                        <h3 className="poppins-thin text-2xl font-semibold text-[#f5e6a2] mb-4">
                             {plan.name}
                         </h3>
-                        <p className="text-3xl font-bold mb-6">{plan.price}</p>
-                        <ul className="space-y-3 text-gray-300">
+                        <p className="poppins-thin text-3xl font-bold mb-6">{plan.price}</p>
+                        <ul className="poppins-thin space-y-3 text-gray-300">
                             {plan.features.map((feature, idx) => (
                                 <li key={idx} className="flex items-center gap-2">
                                     ✅ {feature}
@@ -87,7 +87,7 @@ export default function Pricing() {
                         </ul>
                         <motion.a
                             href=""
-                            className="mt-6 block text-center rounded-full bg-[#d4af37] text-black font-semibold py-2 hover:bg-[#f5e6a2] transition"
+                            className="poppins-thin mt-6 block text-center rounded-full bg-[#d4af37] text-black font-semibold py-2 hover:bg-[#f5e6a2] transition"
                             whileHover={{ scale: 1.05 }}
                         >
                             Book Now

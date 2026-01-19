@@ -52,7 +52,7 @@ export default function Gallery() {
                 >
                     Our Gallery
                 </motion.h1>
-                <p className="mt-3 text-lg text-gray-300 max-w-2xl mx-auto">
+                <p className="mt-3 text-lg text-gray-300 max-w-2xl mx-auto poppins-thin">
                     Explore our finest transformations, luxury makeovers, and elegant styling sessions.
                 </p>
             </section>

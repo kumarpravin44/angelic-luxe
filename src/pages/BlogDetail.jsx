@@ -65,13 +65,13 @@ export default function BlogDetail() {
                 />
 
                 {/* Title + Date */}
-                <h1 className="text-4xl md:text-5xl font-serif bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-transparent bg-clip-text mb-4">
+                <h1 className="poppins-thin text-4xl md:text-5xl font-serif bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-transparent bg-clip-text mb-4">
                     {post.title}
                 </h1>
-                <p className="text-gray-300 mb-6">{post.date}</p>
+                <p className="poppins-thin text-gray-300 mb-6">{post.date}</p>
 
                 {/* Content */}
-                <div className="text-gray-200 leading-relaxed whitespace-pre-line">
+                <div className="poppins-thin text-gray-200 leading-relaxed whitespace-pre-line">
                     {post.content}
                 </div>
             </motion.div>

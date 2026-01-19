@@ -139,7 +139,7 @@ export default function GalleryPreview() {
             <div className="text-center mt-10">
                 <Link
                     to="/Gallery"
-                    className="rounded-full bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-black font-semibold px-6 py-3 shadow-lg hover:shadow-xl transition"
+                    className="poppins-thin rounded-full bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-black font-semibold px-6 py-3 shadow-lg hover:shadow-xl transition"
                 >
                     View Gallery
                 </Link>

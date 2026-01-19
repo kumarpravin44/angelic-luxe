@@ -32,7 +32,7 @@ export default function Services() {
             {/* Hero Section */}
             <section className="text-center mb-16">
                 <motion.h1
-                    className="text-4xl md:text-7xl transcity-font text-white font-200 leading-tight"
+                    className="text-4xl md:text-7xl transcity-font text-white font-200 leading-tight "
                     initial={{ opacity: 0, y: -40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
@@ -40,7 +40,7 @@ export default function Services() {
                     Our Services
                 </motion.h1>
                 <motion.p
-                    className="mt-4 text-base sm:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed"
+                    className="mt-4 text-base sm:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed poppins-thin"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.3 }}
@@ -74,10 +74,10 @@ export default function Services() {
                             className={`w-full md:w-5/12 bg-white/10 backdrop-blur-md border border-[#d4af37]/40 rounded-xl p-6 shadow-lg ${i % 2 === 0 ? "md:mr-auto" : "md:ml-auto"
                                 }`}
                         >
-                            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold bg-gradient-to-r from-[#f5e6a2] to-[#fff] text-transparent bg-clip-text mb-3">
+                            <h3 className="poppins-thin text-lg sm:text-xl md:text-2xl font-semibold bg-gradient-to-r from-[#f5e6a2] to-[#fff] text-transparent bg-clip-text mb-3">
                                 {service.title}
                             </h3>
-                            <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+                            <p className="poppins-thin text-gray-300 text-sm sm:text-base leading-relaxed">
                                 {service.desc}
                             </p>
                         </div>
@@ -94,7 +94,7 @@ export default function Services() {
                 >
                     <Link
                         to="/BookAppointment"
-                        className="rounded-full bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-black font-semibold px-6 py-3 shadow-lg hover:shadow-xl transition"
+                        className="poppins-thin rounded-full bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-black font-semibold px-6 py-3 shadow-lg hover:shadow-xl transition"
                     >
                         Book Your Appointment
                     </Link>

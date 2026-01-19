@@ -12,19 +12,19 @@ export default function BookAppointment() {
             >
                 {/* Left Branding Panel */}
                 <div className="bg-gradient-to-br from-[#d4af37] to-[#f5e6a2] flex flex-col items-center justify-center p-10 text-black">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6">Angelic Luxe</h2>
-                    <p className="text-lg max-w-md text-center">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 poppins-thin">Angelic Luxe</h2>
+                    <p className="text-lg max-w-md text-center poppins-thin">
                         Elevate your beauty with our premium makeover sessions. Book today and shine with elegance.
                     </p>
                 </div>
 
                 {/* Right Form Panel */}
                 <div className="bg-white/95 backdrop-blur-md p-10 text-black">
-                    <h3 className="text-2xl font-semibold text-[#2c1f1a] mb-6">Book Your Appointment</h3>
+                    <h3 className="text-2xl font-semibold text-[#2c1f1a] mb-6 poppins-thin">Book Your Appointment</h3>
                     <form
                         action="https://formspree.io/f/mkoojezr"  // replace with your actual Formspree endpoint
                         method="POST"
-                        className="space-y-5"
+                        className="space-y-5 poppins-thin"
                     >
                         <div>
                             <label className="block text-sm mb-2">Full Name</label>
@@ -85,7 +85,7 @@ export default function BookAppointment() {
                         </div>
                         <motion.button
                             type="submit"
-                            className="w-full rounded-full bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-black font-semibold py-3 shadow-lg hover:shadow-xl transition"
+                            className="poppins-thin w-full rounded-full bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-black font-semibold py-3 shadow-lg hover:shadow-xl transition"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >

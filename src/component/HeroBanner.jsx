@@ -38,13 +38,13 @@ export default function HeroBanner() {
                     Redefining Luxe Transformations
 
                 </h1>
-                <p className="mt-4 text-lg md:text-xl text-gray-200 font-sans">
+                <p className="mt-4 text-lg md:text-xl text-gray-200 poppins-thin">
                     Where artistry meets sophistication for a radiant new you.
                 </p>
                 <div className="mt-8 flex flex-col md:flex-row gap-4 justify-center">
                     <Link
                         to="/Services"
-                        className="rounded-full bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-black font-semibold px-6 py-3 shadow-lg hover:shadow-xl transition"
+                        className="rounded-full poppins-thin bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-black font-semibold px-6 py-3 shadow-lg hover:shadow-xl transition"
                     >
                         Explore Services
                     </Link>

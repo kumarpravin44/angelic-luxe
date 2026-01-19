@@ -41,7 +41,7 @@ export default function Blog() {
                 >
                     Our Blog
                 </motion.h1>
-                <p className="mt-3 text-lg text-gray-300 max-w-2xl mx-auto">
+                <p className="poppins-thin mt-3 text-lg text-gray-300 max-w-2xl mx-auto">
                     Insights, trends, and stories from Angelic Luxe Makeovers — crafted to inspire elegance.
                 </p>
             </section>
@@ -63,14 +63,14 @@ export default function Blog() {
                             className="w-full h-56 object-cover transform group-hover:scale-110 transition duration-500"
                         />
                         <div className="p-6">
-                            <h3 className="text-xl font-semibold bg-gradient-to-r from-[#f5e6a2] to-[#fff] text-transparent bg-clip-text mb-2">
+                            <h3 className="poppins-thin text-xl font-semibold bg-gradient-to-r from-[#f5e6a2] to-[#fff] text-transparent bg-clip-text mb-2">
                                 {post.title}
                             </h3>
-                            <p className="text-gray-300 text-sm mb-2">{post.date}</p>
-                            <p className="text-gray-400 mb-4">{post.excerpt}</p>
+                            <p className="poppins-thin text-gray-300 text-sm mb-2">{post.date}</p>
+                            <p className="poppins-thin text-gray-400 mb-4">{post.excerpt}</p>
                             <a
                                 href={post.link}
-                                className="inline-block rounded-full bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-black font-semibold px-5 py-2 shadow-lg hover:shadow-xl transition"
+                                className="poppins-thin inline-block rounded-full bg-gradient-to-r from-[#d4af37] to-[#f5e6a2] text-black font-semibold px-5 py-2 shadow-lg hover:shadow-xl transition"
                             >
                                 Read More
                             </a>
