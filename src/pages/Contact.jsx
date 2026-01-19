@@ -15,11 +15,8 @@ export default function Contact() {
         <section className="relative min-h-screen text-white">
             {/* Background */}
             <div
-                className="absolute inset-0 bg-cover bg-center"
-                style={{
-                    backgroundImage:
-                        "url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1600&q=80')",
-                }}
+                className="absolute inset-0 bg-cover bg-center contact-bg"
+
             />
             <div className="absolute inset-0 bg-black/70" />
 

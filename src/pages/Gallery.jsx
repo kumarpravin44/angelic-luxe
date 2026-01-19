@@ -5,13 +5,16 @@ import gallery1 from "../assets/gallery/gallery-1.jpg";
 import gallery2 from "../assets/gallery/gallery-2.jpg";
 import gallery3 from "../assets/gallery/gallery-3.jpg";
 import promoVideo from "../assets/gallery/promo.mp4";
+import babyHairCut from "../assets/gallery/baby-hair-cut.mp4";
 
 export default function Gallery() {
     const media = [
-        { type: "image", src: gallery1, title: "Bridal Makeover" },
-        { type: "image", src: gallery2, title: "Luxury Styling" },
-        { type: "image", src: gallery3, title: "Elegant Hair Design" },
-        { type: "video", src: promoVideo, title: "Behind the Scenes" },
+        { type: "video", src: promoVideo, title: "Global Hair Color" },
+        { type: "video", src: babyHairCut, title: "Baby Hair Cut" },
+        { type: "image", src: gallery1, title: "Normal Makeover" },
+        { type: "image", src: gallery2, title: "Party Makeover" },
+        { type: "image", src: gallery3, title: "Saree Draping" },
+
     ];
 
     const [selectedIndex, setSelectedIndex] = useState(null);

@@ -51,7 +51,14 @@ img {
 }
 
 .about-banner {
-  background-image: url('/src/assets/hero-2.jpg');
+  background-image: url('/src/assets/about.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact-bg {
+  background-image: url('/src/assets/contact.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -1,7 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+// Import images from src/assets/team/
+import soniImg from "../assets/team/soni.jpeg";
+import chandaImg from "../assets/team/chanda.jpeg";
+import komalImg from "../assets/team/komal.jpeg";
+
 export default function About() {
+    const team = [
+        { name: "Sonali Pawar", role: "Creative Director & Lead Designer", img: soniImg },
+        { name: "Chanda Thakur", role: "Senior Makeup Artist", img: chandaImg },
+        { name: "Komal Sinde", role: "Senior Hair Artist", img: komalImg },
+    ];
+
     return (
         <div className="relative text-white">
 
@@ -30,10 +41,11 @@ export default function About() {
             </section>
 
             {/* Story Section */}
-            <section className=" py-20 px-6 text-center bg-[#4e352b]">
+            <section className="py-20 px-6 text-center bg-[#4e352b]">
                 <div className="max-w-5xl mx-auto">
-                    <h2 className="text-4xl poppins-thin font-bold text-center text-white mb-8 tracking-wide">Our Story</h2>
-
+                    <h2 className="text-4xl poppins-thin font-bold text-center text-white mb-8 tracking-wide">
+                        Our Story
+                    </h2>
                     <p className="text-gray-300 leading-relaxed poppins-thin text-lg">
                         Angelic Luxe Makeovers was founded with a vision to redefine luxury
                         beauty experiences. From personalized consultations to flawless
@@ -44,7 +56,7 @@ export default function About() {
             </section>
 
             {/* Values Section */}
-            <section className=" py-20 px-6 text-center gradient-bg">
+            <section className="py-20 px-6 text-center gradient-bg">
                 <div className="max-w-5xl mx-auto">
                     <h2 className="text-4xl poppins-thin font-bold text-center text-white mb-8 tracking-wide">
                         Our Values
@@ -63,7 +75,9 @@ export default function About() {
                                 transition={{ duration: 0.6, delay: i * 0.2 }}
                                 viewport={{ once: true }}
                             >
-                                <h3 className="text-xl poppins-thin font-semibold text-[#f5e6a2] mb-3">{value.title}</h3>
+                                <h3 className="text-xl poppins-thin font-semibold text-[#f5e6a2] mb-3">
+                                    {value.title}
+                                </h3>
                                 <p className="text-gray-300 poppins-thin">{value.desc}</p>
                             </motion.div>
                         ))}
@@ -72,17 +86,13 @@ export default function About() {
             </section>
 
             {/* Team Section */}
-            <section className=" py-20 px-6 text-center bg-[#4e352b]">
+            <section className="py-20 px-6 text-center bg-[#4e352b]">
                 <div className="max-w-5xl mx-auto">
                     <h2 className="text-4xl poppins-thin font-bold text-center text-white mb-8 tracking-wide">
                         Meet Our Team
                     </h2>
                     <div className="grid md:grid-cols-3 gap-10">
-                        {[
-                            { name: "Pravin", role: "Creative Director & Lead Designer", img: "/images/team1.jpg" },
-                            { name: "Sarah", role: "Senior Makeup Artist", img: "/images/team2.jpg" },
-                            { name: "Sarah", role: "Senior Makeup Artist", img: "/images/team2.jpg" },
-                        ].map((member, i) => (
+                        {team.map((member, i) => (
                             <motion.div
                                 key={i}
                                 className="text-center bg-white/10 backdrop-blur-md rounded-xl p-8 shadow-lg hover:scale-105 transition-transform"
@@ -96,13 +106,10 @@ export default function About() {
                                     alt={member.name}
                                     className="w-32 h-32 mx-auto rounded-full border-4 border-[#d4af37] mb-4 object-cover hover:scale-110 transition-transform"
                                 />
-                                <h3 className="text-xl poppins-thin font-semibold text-[#f5e6a2]">{member.name}</h3>
+                                <h3 className="text-xl poppins-thin font-semibold text-[#f5e6a2]">
+                                    {member.name}
+                                </h3>
                                 <p className="text-gray-300 poppins-thin">{member.role}</p>
-                                <div className="flex justify-center gap-4 mt-4 text-[#d4af37]">
-                                    <a href="#" className="hover:text-[#f5e6a2]">🌐</a>
-                                    <a href="#" className="hover:text-[#f5e6a2]">📸</a>
-                                    <a href="#" className="hover:text-[#f5e6a2]">💼</a>
-                                </div>
                             </motion.div>
                         ))}
                     </div>
