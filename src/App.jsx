@@ -26,7 +26,7 @@ function App() {
     <Router>
       <ScrollToTop></ScrollToTop>
       {/* Loader bar */}
-      <LoadingBar color="#128C7E" ref={loadingBarRef} height={5} />
+      <LoadingBar color="#d4af37" ref={loadingBarRef} height={5} />
 
       <Header />
       <Routes>
